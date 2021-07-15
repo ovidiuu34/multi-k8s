@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
         - name: server
-          image: ovidiuvlad09/multi-server
+          image: cygnetops/multi-server-pgfix-5-11
           ports:
             - containerPort: 5000
           env:
             - name: REDIS_HOST
               value: redis-cluster-ip-service
-            - name: REDIST_PORT
+            - name: REDIS_PORT
               value: '6379'
             - name: PGUSER
               value: postgres
